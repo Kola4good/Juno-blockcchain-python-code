@@ -1,0 +1,134 @@
+import hashlib
+class JunoCoinBlock:
+
+    def __init__(self, previous_block_hash, transaction_list):
+        self.previous_block_hash = previous_block_hash
+        self.transaction_list = transaction_list
+
+        self.block_data = "_".join(transaction_list) + "_" + previous_block_hash
+        self.block_hash = hashlib.sha256(self.block_data.encode()).hexdigest()
+
+t1 = "Tayo sends 2 Juno to Ayomide"
+t2 = "Kolapo sends 5 Juno to Ayomide"
+t3 = "Mubarak sends 30 Juno to Seun"
+t4 = "Seun send 10 Juno to Bobby"
+t5 = "Yinka send 15 Juno to Abiola"
+t6 = "Marybeth sends 45 Juno to Bobby"
+t7 = "Abiola sends 4 Juno to Kolapo"
+t8 = "Kolapo sends 25 Juno to Mubarak"
+t9 = "Abiola sends 300 Juno to Marybeth"
+t10 = "Marybeth send 100 Juno to Yinka"
+t11 = "Tayo sends 2 Juno to AyomideJuno"
+t12 = "Kolapo sends 5 Juno to Ayomide"
+t13 = "Mubarak sends 30 Junoto Seun"
+t14 = "Seun send 10 Juno to Bobby"
+t15 = "Yinka send 15 Juno to Abiola"
+t16 = "Marybeth sends 45 Juno to Bobby"
+t17 = "Abiola sends 4 Juno to Kolapo"
+t18 = "Kolapo sends 25 Juno to Mubarak"
+t19 = "Abiola sends 300 Juno to Marybeth"
+t20 = "Marybeth send 100 Juno to Yinka"
+t21 = "Tayo sends 2 Juno to Ayomide"
+t22 = "Kolapo sends 5 Juno to Ayomide"
+t23 = "Mubarak sends 30 Juno to Seun"
+t24 = "Seun send 10 Juno to Bobby"
+t25 = "Yinka send 15 Juno to Abiola"
+t26 = "Marybeth sends 45 Juno to Bobby"
+t27 = "Abiola sends 4 Juno to Kolapo"
+t28 = "Kolapo sends 25 Juno to Mubarak"
+t29 = "Abiola sends 300 Juno to Marybeth"
+t30 = "Marybeth send 100 Juno to Yinka"
+t31 = "Tayo sends 2 Juno to Ayomide"
+t32 = "Kolapo sends 5 Juno to Ayomide"
+t33 = "Mubarak sends 30 Juno to Seun"
+t34 = "Seun send 10 Juno to Bobby"
+t35 = "Yinka send 15 Juno to Abiola"
+t36 = "Marybeth sends 45 Juno to Bobby"
+t37 = "Abiola sends 4 Juno to Kolapo"
+t38 = "Kolapo sends 25 Juno to Mubarak"
+t39 = "Abiola sends 300 Juno to Marybeth"
+t40 = "Marybeth send 100 Juno to Yinka"
+t41 = "Tayo sends 2 Juno to Ayomide"
+t42 = "Kolapo sends 5 Juno to Ayomide"
+t43 = "Mubarak sends 30 Juno to Seun"
+t44 = "Seun send 10 Juno to Bobby"
+t45 = "Yinka send 15 Juno to Abiola"
+t46 = "Marybeth sends 45 Juno to Bobby"
+t47 = "Abiola sends 4 Juno to Kolapo"
+t48 = "Kolapo sends 25 Juno to Mubarak"
+t49 = "Abiola sends 300 Juno to Marybeth"
+t50 = "Marybeth send 100 Juno to Yinka"
+
+
+initial_block = JunoCoinBlock("Initial String" , [t1,t2])
+
+print(initial_block.block_data)
+print(initial_block.block_hash)
+
+second_block = JunoCoinBlock(initial_block.block_hash,[t3,t4])
+print(second_block.block_data)
+print(second_block.block_hash)
+
+third_block = JunoCoinBlock(second_block.block_hash,[t5,t6])
+print(third_block.block_data)
+print(third_block.block_hash)
+
+fourth_block = JunoCoinBlock(third_block.block_hash,[t7,t8])
+print(fourth_block.block_data)
+print(fourth_block.block_hash)
+
+fifth_block = JunoCoinBlock(fourth_block.block_hash,[t9,t10])
+print(fifth_block.block_data)
+print(fifth_block.block_hash)
+
+sixth_block = JunoCoinBlock(fifth_block.block_hash,[t11,t12])
+print(sixth_block.block_data)
+print(sixth_block.block_hash)
+
+seventh_block = JunoCoinBlock(sixth_block.block_hash,[t13,t14])
+print(seventh_block.block_data)
+print(seventh_block.block_hash)
+
+eighth_block = JunoCoinBlock(seventh_block.block_hash,[t15,t16])
+print(eighth_block.block_data)
+print(eighth_block.block_hash)
+
+ninth_block = JunoCoinBlock(eighth_block.block_hash,[t17,t18])
+print(ninth_block.block_data)
+print(ninth_block.block_hash)
+
+tenth_block = JunoCoinBlock(ninth_block.block_hash,[t19,t20])
+print(tenth_block.block_data)
+print(tenth_block.block_hash)
+
+eleventh_block = JunoCoinBlock(ninth_block.block_hash,[t21,t22])
+print(eleventh_block.block_data)
+print(eleventh_block.block_hash)
+
+twelth_block = JunoCoinBlock(ninth_block.block_hash,[t22,t23])
+print(twelth_block.block_data)
+print(twelth_block.block_hash)
+
+thirteenth_block = JunoCoinBlock(ninth_block.block_hash,[t24,t25])
+print(thirteenth_block.block_data)
+print(thirteenth_block.block_hash)
+
+fourteenth_block = JunoCoinBlock(ninth_block.block_hash,[t26,t27])
+print(fourteenth_block.block_data)
+print(fourteenth_block.block_hash)
+
+fifteenth_block = JunoCoinBlock(ninth_block.block_hash,[t28,t29])
+print(fifteenth_block.block_data)
+print(fifteenth_block.block_hash)
+
+sixteenth_block = JunoCoinBlock(ninth_block.block_hash,[t30,t31])
+print(sixteenth_block.block_data)
+print(sixteenth_block.block_hash)
+
+seventeenth_block = JunoCoinBlock(ninth_block.block_hash,[t31,t32])
+print(seventeenth_block.block_data)
+print(seventeenth_block.block_hash)
+
+eigtheenth_block = JunoCoinBlock(ninth_block.block_hash,[t33,t34])
+print(eigtheenth_block.block_data)
+print(eigtheenth_block.block_hash)
